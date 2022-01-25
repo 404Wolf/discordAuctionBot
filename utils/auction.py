@@ -1,4 +1,3 @@
-import discord
 import utils.db
 
 
@@ -7,6 +6,7 @@ class listing:
     A live listing.
 
     Attributes:
+        id (int):
         starting (int): starting bid
         ending (int): ending UNIX time
         price (int): current price of item
@@ -25,7 +25,7 @@ class listing:
         """
         pass
 
-    async def list(self, name) -> utils.auction.listing:
+    async def create(self, name) -> utils.auction.listing:
         """
         Create an auction channel and generate an embed for a listing.
 
@@ -37,7 +37,7 @@ class listing:
         """
         pass
 
-    async def unlist(self) -> utils.auction.listing:
+    async def remove(self) -> utils.auction.listing:
         """
         Archive the listing and remove the channel.
 
